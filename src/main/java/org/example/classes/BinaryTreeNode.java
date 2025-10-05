@@ -1,5 +1,8 @@
 package org.example.classes;
 
+import org.example.generator.annotation.CustomClassGenerator;
+
+@CustomClassGenerator
 public class BinaryTreeNode {
     private Integer data;
     private BinaryTreeNode left;

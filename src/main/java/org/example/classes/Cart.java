@@ -1,7 +1,10 @@
 package org.example.classes;
 
+import org.example.generator.annotation.CustomClassGenerator;
+
 import java.util.List;
 
+@CustomClassGenerator
 public class Cart {
     private List<Product> items;
 
