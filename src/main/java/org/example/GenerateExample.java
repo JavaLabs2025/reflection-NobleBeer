@@ -11,7 +11,7 @@ import org.example.generator.InstanceGenerator;
 
 public class GenerateExample {
     public static void main(String[] args) {
-        InstanceGenerator instanceGenerator = new InstanceGenerator();
+        var instanceGenerator = new InstanceGenerator();
         try {
             var generated1 = instanceGenerator.generateValueOf(Example.class);
             System.out.println(generated1);

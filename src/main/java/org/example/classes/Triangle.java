@@ -1,8 +1,8 @@
 package org.example.classes;
 
-import org.example.generator.annotation.CustomClassGenerator;
+import org.example.generator.annotation.Generatable;
 
-@CustomClassGenerator
+@Generatable
 public class Triangle implements Shape {
     private double sideA;
     private double sideB;

@@ -1,8 +1,8 @@
 package org.example.classes;
 
-import org.example.generator.annotation.CustomClassGenerator;
+import org.example.generator.annotation.Generatable;
 
-@CustomClassGenerator
+@Generatable
 public interface Shape {
     double getArea();
     double getPerimeter();

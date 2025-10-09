@@ -1,6 +1,6 @@
 package org.example.generator;
 
-import org.example.generator.annotation.CustomClassGenerator;
+import org.example.generator.annotation.Generatable;
 
 import java.io.File;
 import java.util.Arrays;
@@ -49,7 +49,7 @@ public class ClassPathScanner {
     private static Optional<Class<?>> tryAddClass(String className) {
         try {
             var name = Class.forName(className);
-            if (name.isAnnotationPresent(CustomClassGenerator.class)) {
+            if (name.isAnnotationPresent(Generatable.class)) {
                 return Optional.of(name);
             }
         } catch (Throwable ignored) {}

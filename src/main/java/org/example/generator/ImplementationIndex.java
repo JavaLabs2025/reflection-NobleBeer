@@ -1,7 +1,7 @@
 package org.example.generator;
 
 import org.example.common.RandomProvider;
-import org.example.generator.annotation.CustomClassGenerator;
+import org.example.generator.annotation.Generatable;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -31,7 +31,7 @@ public class ImplementationIndex {
     private void buildIndex() {
         annotatedTypes.stream()
                 .flatMap(currentClass -> {
-                    CustomClassGenerator annotation = currentClass.getAnnotation(CustomClassGenerator.class);
+                    Generatable annotation = currentClass.getAnnotation(Generatable.class);
 
                     if (annotation != null && annotation.implementsFor().length > 0) {
                         return Arrays.stream(annotation.implementsFor())
